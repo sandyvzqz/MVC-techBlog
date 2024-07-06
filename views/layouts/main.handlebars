@@ -6,21 +6,23 @@
         <title>Blog Post Home</title>
         <link rel="stylesheet" href="/css/style.css">
     </head>
+
+    <body>
+        <header>
+            <h1>The Tech Blog</h1>
+            <nav>
+                <button>Home</button>
+                <button>Dashboard</button>
+                <button>Login</button>
+                {{#if loggedIn}}
+                <button>Logout</button>
+                {{/if}}
+            </nav>
+        </header>
+        <main>
+            <!-- we're going to render the all view and inject it(the all.handlebars template) here where the body placeholder is -->
+            {{{ body}}}
+        </main>
+        <footer> tech blog</footer>
+    </body>
 </html>
-
-<body>
-    <header>
-        <h1>The Tech Blog</h1>
-        <nav>
-            <button>Home</button>
-            <button>Dashboard</button>
-            <button>Logout</button>
-        </nav>
-    </header>
-    <main>
-        <!-- we're going to render the all view and inject it(the all.handlebars template) here where the body placeholder is -->
-        {{{ body}}}
-    </main>
-
-<body>
-</body>

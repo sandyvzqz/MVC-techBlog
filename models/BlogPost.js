@@ -16,12 +16,14 @@ BlogPost.init(
       allowNull: false,
     },
     content: {
+      // could also be TEXT
       type: DataTypes.STRING,
       allowNull: false,
     },
     dateCreated: {
-      type: DataTypes.STRING,
+      type: DataTypes.DATE,
       allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     userId: {
       type: DataTypes.INTEGER,
@@ -33,6 +35,7 @@ BlogPost.init(
   },
   {
     sequelize,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: "blogpost",
