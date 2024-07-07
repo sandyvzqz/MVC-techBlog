@@ -1,0 +1,11 @@
+{{#if loggedIn}}
+    <h1>Welcome to the tech blog, {{username}} !</h1>
+    <div>
+        {{#each blogPosts}}
+            {{> blogPost}}
+        {{/each}}
+    </div>
+{{else}}
+    <h1>Welcome to the tech blog!</h1>
+    <p> Please <a href="/login">login</a> or <a href="/signup">sign up</a> to continue!</p>
+{{/if}}

@@ -6,15 +6,4 @@
     {{!-- post content will go here --}}
     <p>{{content}}</p>
     <p> Post created by: {{username}}, on {{dateCreated}}</p>
-    <div>
-        <h3>Comments:</h3>
-    </div>
-    {{!-- form for posting a comment ONLY if user is logged in--}}
-    {{#if loggedIn}}
-    <form>
-        <label>Leave a comment:</label>
-        <textarea placeholder="your comment here"></textarea>
-        <button>Submit</button>
-    </form>
-    {{/if}}
 </section>

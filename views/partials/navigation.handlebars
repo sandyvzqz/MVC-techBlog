@@ -1,0 +1,15 @@
+<nav>
+    <h1>The Tech blog</h1>
+    <div>
+        <ul>
+            <li>Home</li>
+            {{#if loggedIn}}
+            <li>Dashboard</li>
+            <li>Logout</li>
+            {{else}}
+            <li>Login</li>
+            <li>Sign Up</li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>
